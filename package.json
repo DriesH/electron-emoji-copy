@@ -15,7 +15,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron": "electron ."
+    "start-web": "set PORT=3000 && set ENV=browser && yarn start",
+    "start-electron": "set PORT=3001 && set ENV=electron && yarn start",
+    "run-electron": "electron ."
   },
   "devDependencies": {
     "electron": "^2.0.9"
