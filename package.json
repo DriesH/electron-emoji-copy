@@ -1,0 +1,8 @@
+{
+  "name": "emoji-copy-paste",
+  "version": "1.0.0",
+  "description": "Electron test application",
+  "main": "index.js",
+  "author": "Dries Heyninck",
+  "license": "MIT"
+}
