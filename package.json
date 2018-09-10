@@ -1,8 +1,23 @@
 {
   "name": "emoji-copy-paste",
-  "version": "1.0.0",
-  "description": "Electron test application",
-  "main": "index.js",
-  "author": "Dries Heyninck",
-  "license": "MIT"
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/electron-main-process.js",
+  "dependencies": {
+    "copy-to-clipboard": "^3.0.8",
+    "emoji-mart": "^2.8.1",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^2.0.9"
+  }
 }

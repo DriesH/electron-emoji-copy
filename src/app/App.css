@@ -1,0 +1,37 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: papayawhip;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Title {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+.PickerContainer {
+  margin-bottom: 28px;
+}
+
+.PickerContainer .emoji-mart-preview {
+  display: none;
+}
+
+.SuccessMessage {
+  line-height: 32px;
+  font-size: 32px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.SuccessMessage.visible {
+  opacity: 1;
+}
+
+.SuccessMessage.hidden {
+  opacity: 0;
+}
