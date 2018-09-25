@@ -8,6 +8,7 @@
     "emoji-mart": "^2.8.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
   "scripts": {
@@ -15,8 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start-web": "set PORT=3000 && set ENV=browser && yarn start",
-    "start-electron": "set PORT=3001 && set ENV=electron && yarn start",
+    "start-web": "PORT=3000 ENV=browser yarn start",
+    "start-electron": "PORT=3001 ENV=electron yarn start",
     "run-electron": "electron ."
   },
   "devDependencies": {
