@@ -5,15 +5,20 @@ import './app/index.css';
 import App from './app/App';
 import Settings from './app/Settings';
 
-const Router = process.env.ENV === 'browser' ? BrowserRouter : MemoryRouter;
+const Router = !__IS_ELECTRON__ ? BrowserRouter : MemoryRouter;
 
-console.info(Router, process.env.ENV);
+const memoryRouterProps = {
+  initialEntries: ['/', '/settings'],
+  initialIndex: 1,
+};
+
+const routerProps = !__IS_ELECTRON__ ? {} : memoryRouterProps;
 
 ReactDOM.render(
-  <Router>
+  <Router {...routerProps}>
     <Switch>
-      <Route path="/" component={App} />
-      <Route path="/settings" component={Settings} />
+      <Route exact path="/" component={App} />
+      <Route exact path="/settings" component={Settings} />
     </Switch>
   </Router>,
   document.getElementById('root'),

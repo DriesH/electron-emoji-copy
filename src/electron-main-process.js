@@ -1,4 +1,8 @@
 const electron = require('electron');
+const {
+  default: installExtension,
+  REACT_DEVELOPER_TOOLS,
+} = require('electron-devtools-installer');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
@@ -12,7 +16,11 @@ function createWindow() {
 
   mainWindow.loadURL('http://localhost:3001');
 
-  // mainWindow.webContents.openDevTools();
+  installExtension(REACT_DEVELOPER_TOOLS)
+    .then(name => console.log(`added extension: ${name}`))
+    .catch(err => console.error('an error occured', err));
+
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', function() {
     mainWindow = null;
