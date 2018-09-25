@@ -14,6 +14,9 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({ width: 800, height: 600 });
 
+  // You wouldn't do this. But for now I used this, because I didn't have time
+  // To setup HMR and electron build tools
+  // Normally this would be index.html
   mainWindow.loadURL('http://localhost:3001');
 
   installExtension(REACT_DEVELOPER_TOOLS)
